@@ -1,0 +1,10 @@
+# openai
+requests
+beautifulsoup4
+lxml
+python-dotenv
+PyPDF2
+transformers 
+torch
+spacy
+scikit-learn
