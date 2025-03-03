@@ -48,6 +48,5 @@ Job Description:
         return result
     except Exception as e:
         print("Model inference failed, switching to local TF-IDF fallback:", e)
-        # Uncomment one of the following lines based on your preference:
         return classify_resume_local_tfidf(job_description, resume_text, threshold=0.5)
         # return classify_resume_local_spacy(job_description, resume_text, threshold=0.6)
