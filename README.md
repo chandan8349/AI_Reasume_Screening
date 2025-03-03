@@ -14,8 +14,6 @@ This project is an AI-powered tool that:
    ```bash
    pip install -r requirements.txt
 
-python main.py
-
 <!-- openai migrate -->
 
 ---
