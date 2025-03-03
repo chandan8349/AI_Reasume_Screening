@@ -9,25 +9,26 @@ This project is an AI-powered tool that:
 
 
 ## Setup
+1. create virtual env
+```bash
+   /opt/homebrew/bin/python3 -m venv venv
+   python3.10 -m venv venv
+   source venv312/bin/activate
+```
 
-1. Install the required packages:
+2. Install the required packages:
    ```bash
    pip install -r requirements.txt
+```
 
+```bash
 python -m spacy download en_core_web_sm
-
-<!-- openai migrate -->
-
----
+```
 
 ### 2. requirements.txt
 
 
-###3. create virtual env
 
-/opt/homebrew/bin/python3 -m venv venv
-python3.10 -m venv venv
-source venv312/bin/activate
 
 
 ---
