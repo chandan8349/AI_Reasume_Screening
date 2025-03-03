@@ -2,7 +2,7 @@
 
 This project is an AI-powered tool that:
 - Scrapes resumes and job descriptions from the web.
-- Uses the OpenAI API to analyze and compare the content.
+- Uses the ai_model library to analyze and compare the content.
 - Classifies each resume into two categories: **fit** and **unfit** based on keywords, skills, and relevance.
 
 ## Project Structure
