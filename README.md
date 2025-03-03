@@ -14,7 +14,7 @@ This project is an AI-powered tool that:
    /opt/homebrew/bin/python3 -m venv venv
    python3.10 -m venv venv
    source venv312/bin/activate
-
+```
 
 2. Install the required packages:
 ```
@@ -25,5 +25,7 @@ This project is an AI-powered tool that:
 ```
 
 ---
-To Run :
+3. To Run :
+```
 python main.py 
+```
