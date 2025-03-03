@@ -17,6 +17,7 @@ This project is an AI-powered tool that:
 
 
 2. Install the required packages:
+```
 
    pip install -r requirements.txt
 
