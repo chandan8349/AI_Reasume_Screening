@@ -31,7 +31,5 @@ source venv312/bin/activate
 
 
 ---
-Command-Line Arguments:
-You can override the default paths by passing command-line arguments when running the script:
-
-python main.py data/job_descriptions/job_desc_full_stack_engineer.pdf data/resumes
+To Run :
+python main.py 
