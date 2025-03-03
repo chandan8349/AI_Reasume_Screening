@@ -20,16 +20,10 @@ This project is an AI-powered tool that:
    ```bash
    pip install -r requirements.txt
 ```
-
+```
 ```bash
 python -m spacy download en_core_web_sm
 ```
-
-### 2. requirements.txt
-
-
-
-
 
 ---
 To Run :
