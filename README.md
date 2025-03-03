@@ -14,15 +14,13 @@ This project is an AI-powered tool that:
    /opt/homebrew/bin/python3 -m venv venv
    python3.10 -m venv venv
    source venv312/bin/activate
-```
+
 
 2. Install the required packages:
-   ```bash
+
    pip install -r requirements.txt
-```
-```
-```bash
-python -m spacy download en_core_web_sm
+
+   python -m spacy download en_core_web_sm
 ```
 
 ---
