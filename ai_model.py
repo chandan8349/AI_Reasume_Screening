@@ -1,27 +1,20 @@
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-import torch
+from transformers import pipeline
 from utils.logger import setup_logging
 
 logger = setup_logging()
 
-# Load a pre-trained model and tokenizer from Hugging Face
+# Load a pre-trained model from Hugging Face
 model_name = "distilbert-base-uncased-finetuned-sst-2-english"
-model = AutoModelForSequenceClassification.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
+classifier = pipeline("text-classification", model=model_name, truncation=True, max_length=512)
 
 def analyze_resume(prompt):
     """Analyze resume using a Hugging Face model."""
     try:
-        # Tokenize the input text and truncate it to the maximum length
-        inputs = tokenizer(prompt, truncation=True, max_length=512, return_tensors="pt")
-        
-        # Perform inference
-        with torch.no_grad():
-            outputs = model(**inputs)
-            predictions = torch.nn.functional.softmax(outputs.logits, dim=-1)
-            label = torch.argmax(predictions, dim=1).item()
-        
-        return "fit" if label == 1 else "unfit"
+        # Pass the prompt directly to the classifier with truncation enabled
+        result = classifier(prompt)
+        label = result[0]['label']
+        logger.info(f"Classification result: {label}")
+        return "fit" if label == "POSITIVE" else "unfit"
     except Exception as e:
         logger.error(f"Model inference failed: {str(e)}")
         return "unfit"
