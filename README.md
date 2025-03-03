@@ -14,11 +14,20 @@ This project is an AI-powered tool that:
    ```bash
    pip install -r requirements.txt
 
+python -m spacy download en_core_web_sm
+
 <!-- openai migrate -->
 
 ---
 
 ### 2. requirements.txt
+
+
+###3. create virtual env
+
+/opt/homebrew/bin/python3 -m venv venv
+python3.10 -m venv venv
+source venv312/bin/activate
 
 
 ---
